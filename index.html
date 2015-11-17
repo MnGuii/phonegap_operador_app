@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html lang="pt-BR">
+<head>
+<title>Carregando o Technoee...</title>
+<meta charset="UTF-8">
+</head>
+<body bgcolor="#00697F">
+<center>
+<br><br><br>
+<!--<img src="splashscreen_250_210.png" alt="Technoee" width="250" height="210"/>-->
+<h1 style="text-align:center;font-family: Arial, font-size: 30px !important; color:white">TECHNOEE</h1>
+<br><br><br>
+<img src="ajax-loader.gif" alt="Carregando..."/>
+</center>
+<script>
+function ifServerOnline(ifOnline, ifOffline)
+{
+    var img = document.body.appendChild(document.createElement("img"));
+	img.style.visibility = 'hidden';
+    img.onload = function()
+    {
+        ifOnline && ifOnline.constructor == Function && ifOnline();
+    };
+    img.onerror = function()
+    {
+        ifOffline && ifOffline.constructor == Function && ifOffline();
+    };
+	img.style.visibility = 'hidden';
+    img.src = "http://oeecdc.com/online.png";        
+}
+
+ifServerOnline(function()
+{
+	document.location = 'http://www.oeecdc.com/operador_app/index.php'
+},
+function ()
+{
+	document.location = 'offline.html';
+});
+</script>
+</body>
+</html>
