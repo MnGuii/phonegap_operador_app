@@ -15,7 +15,7 @@ TCC Team
 <!-- ./ Plataformas /> -->
 
 <!-- Customize your app and platform with the preference element. -->
-<preference name="phonegap-version" value="cli-5.2.0" /> <!-- all: default means both landscape and portrait are enabled -->
+<preference name="phonegap-version" value="cli-6.3.0" /> <!-- all: default means both landscape and portrait are enabled -->
 <preference name="orientation" value="default" />
 <preference name="target-device" value="universal" /> <!-- all: possible values handset, tablet, or universal -->
 <preference name="deployment-target" value="7.0" />
